@@ -6,17 +6,17 @@ export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID
 
 if (!projectId) throw new Error('Project ID is not defined')
 
-export const config = defaultWagmiConfig({
+export const wagmiConfig = defaultWagmiConfig({
   projectId,
   chains: [mainnet, sepolia],
   metadata: {
-    name: 'My App',
-    description: 'My app description',
-    url: 'https://myapp.com',
-    icons: ['https://myapp.com/favicon.ico']
+    name: "My App",
+    description: "My app description",
+    url: "https://myapp.com",
+    icons: ["https://myapp.com/favicon.ico"],
   },
   storage: createStorage({
-    storage: cookieStorage
+    storage: cookieStorage,
   }),
-  ssr: true
-})
+  ssr: true,
+});

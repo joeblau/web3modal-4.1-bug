@@ -4,7 +4,7 @@ import './globals.css'
 import { cookieToInitialState } from 'wagmi'
 import { headers } from 'next/headers'
 import ContextProvider from '@/context'
-import { config } from '@/config'
+import { wagmiConfig } from '@/config'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const initialState = cookieToInitialState(config, headers().get('cookie'))
+  const initialState = cookieToInitialState(wagmiConfig, headers().get("cookie"));
   return (
     <html lang="en">
       <body className={inter.className}>

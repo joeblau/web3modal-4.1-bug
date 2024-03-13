@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "@tanstack/react-query": "5.18.1",
+    "@web3modal/siwe": "^4.1.0",
     "@web3modal/wagmi": "4.0.0",
+    "ethers": "^6.11.1",
     "next": "14.0.4",
+    "next-auth": "^4.24.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "siwe": "^2.1.4",
     "viem": "2.7.6",
     "wagmi": "2.5.6"
   },
